@@ -10,11 +10,11 @@
         }else{
             amigos.push(nombreamigo.value);
 
-            console.log(`Amigo añadido: ${nombreamigo.value}`);
-            console.log(`Lista actual de amigos: ${amigos}`);
-
-            mostrarListaAmigos();
+            alert(`Amigo añadido: ${nombreamigo.value}`);
             limpiarCaja();
+
+            console.log(`Lista actual de amigos: ${amigos}`);
+            mostrarListaAmigos();
             
         }
         
@@ -45,6 +45,9 @@
     }
     
     function limpiarCaja(){
-        document.querySelector('#amigo').value ='';
-        console.log("Campo limpiado:", document.querySelector('#amigo').value);
+        document.querySelector('#amigo').value = '';
+    }
+
+    function nombreRepetido(nombre) {
+        return amigos.includes(nombre.trim());
     }
