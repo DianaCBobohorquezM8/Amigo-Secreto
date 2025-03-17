@@ -14,19 +14,21 @@
             console.log(`Lista actual de amigos: ${amigos}`);
 
             mostrarListaAmigos();
-            nombreamigo.value = "";
+            limpiarCaja();
+            
         }
+        
     }
 
    
     function mostrarListaAmigos() {
-    let listaAmigos = document.getElementById("amigos");
+    let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
 
         for( let i =0; i< amigos.length; i++){
         let elementoLi = document.createElement("li");
         li.textContent = amigos[i];
-        listaAmigos.appendChild(item);
+        listaAmigos.appendChild(elementoLi);
         }
     }
 
@@ -42,3 +44,7 @@
         document.getElementById("resultado").innerHTML = `El amigo sorteado es: ${amigoSorteado}`; 
     }
     
+    function limpiarCaja(){
+        document.querySelector('#amigo').value ='';
+        console.log("Campo limpiado:", document.querySelector('#amigo').value);
+    }
