@@ -30,13 +30,15 @@
         }
     }
 
-    if (amigos.length === 0) {
+    function sortearAmigo(){
+
+       if (amigos.length === 0) {
         alert("No hay amigos en la lista para sortear.");
         return;
+        }
+
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let amigoSorteado = amigos[indiceAleatorio];
+        document.getElementById("resultado").innerHTML = `El amigo sorteado es: ${amigoSorteado}`; 
     }
-
-    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-
-    let amigoSorteado = amigos[indiceAleatorio];
-
-    document.getElementById("resultado").innerHTML = `El amigo sorteado es: ${amigoSorteado}`;
+    
