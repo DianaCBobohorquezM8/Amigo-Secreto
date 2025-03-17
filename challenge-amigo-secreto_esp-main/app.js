@@ -3,21 +3,21 @@
 
     function agregarAmigo(){
         let nombreamigo = document.getElementById("amigo");
-        console.log(nombreamigo.value);
-       
-        if(nombreamigo.value.trim() === ""){
+        let nombre = nombreamigo.value.trim();
+        console.log(nombre);
+    
+        if (nombre === "") {
             alert("Por favor, inserte un nombre.");
-        }else{
-            amigos.push(nombreamigo.value);
-
-            alert(`Amigo añadido: ${nombreamigo.value}`);
+        } else if (nombreRepetido(nombre)) {  // Verificación de nombre duplicado
+            alert("Este nombre ya está en la lista. Por favor, ingrese un nombre diferente.");
             limpiarCaja();
-
-            console.log(`Lista actual de amigos: ${amigos}`);
+        } else {
+            amigos.push(nombre);
+            alert(`Amigo añadido: ${nombre}`);
+            limpiarCaja();
+            document.getElementById("resultado").innerHTML = (`Lista actual de amigos: ${amigos}`);
             mostrarListaAmigos();
-            
         }
-        
     }
 
    
