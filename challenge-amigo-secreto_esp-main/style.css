@@ -1,8 +1,8 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #c660f593;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
+    --color-button: #c660f593;
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
@@ -141,6 +141,14 @@ ul {
     font-weight: bold;
     text-align: center;
 }
+.name-list {
+    margin-top: 10px;
+    color: #e86711;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 /* Botón de sortear título */
 .button-draw {
